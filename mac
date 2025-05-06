@@ -122,7 +122,7 @@ brew update --force # https://github.com/Homebrew/brew/issues/1151
 brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "homebrew/services"
-tap "heroku/brew"
+# tap "heroku/brew"
 
 # Unix
 brew "universal-ctags"
@@ -137,8 +137,8 @@ brew "watchman"
 brew "zsh"
 
 # Heroku
-brew "heroku/brew/heroku"
-brew "parity"
+# brew "heroku/brew/heroku"
+# brew "parity"
 
 # GitHub
 brew "gh"
@@ -156,13 +156,16 @@ brew "yarn"
 cask "gpg-suite-no-mail"
 
 # Databases
-brew "postgresql@14", restart_service: :changed
-brew "redis", restart_service: :changed
+# brew "postgresql@14", restart_service: :changed
+# brew "redis", restart_service: :changed
+
+# Coding
+brew install --cask trae
 EOF
 
-fancy_echo "Update heroku binary ..."
-brew unlink heroku
-brew link --force heroku
+# fancy_echo "Update heroku binary ..."
+# brew unlink heroku
+# brew link --force heroku
 
 fancy_echo "Configuring asdf version manager ..."
 if [ ! -d "$HOME/.asdf" ]; then
