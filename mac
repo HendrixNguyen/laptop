@@ -161,6 +161,9 @@ cask "gpg-suite-no-mail"
 
 # Coding
 brew install --cask trae
+brew install --cask hyper
+
+brew instal uv
 EOF
 
 # fancy_echo "Update heroku binary ..."
