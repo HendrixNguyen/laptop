@@ -159,12 +159,13 @@ cask "gpg-suite-no-mail"
 # brew "postgresql@14", restart_service: :changed
 # brew "redis", restart_service: :changed
 
+brew "uv"
+EOF
+
 # Coding
+fancy_echo "Install Item for code ..."
 brew install --cask trae
 brew install --cask hyper
-
-brew instal uv
-EOF
 
 # fancy_echo "Update heroku binary ..."
 # brew unlink heroku
